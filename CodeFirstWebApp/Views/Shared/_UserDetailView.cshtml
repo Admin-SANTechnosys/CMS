@@ -1,0 +1,52 @@
+﻿@model List<CodeFirstWebApp.Models.UserModel>
+@{
+    Layout = null;
+}
+<h1>Employee Informations</h1>
+@if (Model != null)
+{
+
+    <div>
+        <table cellspacing="0"width="50%" border="1">
+            <thead>
+                <tr>
+                    <th>
+                        Employee Name
+                    </th>
+                    <th>
+                        Company Name
+                    </th>
+                    <th>
+                        Department
+                    </th>
+                    <th>
+                        Employee Retired
+                    </th>
+                    <th>
+                        Country
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <td align="center">
+                            @employee.Username
+                        </td>
+                        <td align="center">
+                            @employee.Password
+                        </td>
+                        <td align="center">
+                            @employee.Fname
+                        </td>
+                        <td align="center">
+                            @employee.Lname
+                        </td>
+                   
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
