@@ -4,11 +4,11 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using CodeFirstDataAccess;
-using CodeFirstModel;
-using CodeFirstWebApp.Models;
+using CMS.DATAACCESS;
+using CMS.ENTITY;
+using CMSPLATFORM.Models;
 
-namespace CodeFirstWebApp.Controllers
+namespace CMSPLATFORM.Controllers
 {
     public class HomeController : Controller
     {
@@ -26,7 +26,7 @@ namespace CodeFirstWebApp.Controllers
                 //implementation of IDatabaseInitializer that will delete, recreate,
                 //and optionally re-seed the database with data only if the model has changed since the database was created. 
                 //This implementation require you to use the type of the Database Context because it’s a generic class. 
-               Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CMSContext>());
+           //    Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CMSContext>());
                 return View();
             }
             catch (Exception)
